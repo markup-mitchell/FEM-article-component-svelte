@@ -33,11 +33,10 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: 0;
+		object-position: 0 0;
 	}
-	@media (min-widtth: 768px) {
+	@media (min-width: 768px) {
 		img {
-
 			height: unset;
 		}
 	}

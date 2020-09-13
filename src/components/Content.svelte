@@ -28,4 +28,10 @@
     color: #6E8098;
     margin-bottom: 0;
   }
+
+  @media (min-width: 768px) {
+    .content {
+      padding: 2rem 2.5rem;
+    }
+  }
 </style>

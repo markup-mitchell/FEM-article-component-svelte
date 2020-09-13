@@ -2,23 +2,18 @@
   .card__wrapper {
     width: 100%;
     max-width: 327px;
-     /* change to rem */
-    /* height: 512px;
-    max-height: 280px; */
     border-radius: 0.625rem;
     overflow: hidden;
     box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
   }
 
   .article__image-wrapper {
-    width: 100%;
-    height: 100%;
-    max-height: 39%;
+    height: 200px;
+    display: flex;
   }
 
   .article {
     height: 100%;
-    
     display: flex;
     flex-direction: column;
   }
@@ -34,6 +29,7 @@
       max-width: 39%;
       max-height: unset;
       height: unset;
+
     }
   }
 

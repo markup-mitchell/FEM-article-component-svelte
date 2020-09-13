@@ -27,6 +27,7 @@
   .author__info {
     display: flex;
     flex-direction: column;
+    margin-left: 1rem;
   }
 
   .author-name,
@@ -35,5 +36,10 @@
   }
   .publish-date {
 
+  }
+  @media (min-width: 768px) {
+    .author {
+      padding: 0 2.5rem 2rem
+    }
   }
 </style>
