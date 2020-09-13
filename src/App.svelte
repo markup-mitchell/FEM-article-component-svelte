@@ -1,9 +1,16 @@
 <script>
 	import Card from './components/Card.svelte';
+	import Content from './components/Content.svelte';
+	let ArticleImage = '../images/drawers.jpg';
 </script>
 
 <main>
-	<Card/>
+	<Card>
+		<img slot="article__image" src={ArticleImage} alt="">
+		<div slot="article__content">
+			<Content />
+		</div>
+	</Card>
 </main>
 
 <style>
@@ -15,6 +22,13 @@
 		justify-content: center;
 		align-items: center;
 		padding: 0 1.5rem
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 0;
 	}
 </style>
 

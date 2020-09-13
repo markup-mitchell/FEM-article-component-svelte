@@ -1,6 +1,7 @@
 <style>
   .card__wrapper {
     width: 100%;
+    max-width: 730px; /* change to rem */
     height: 512px;
     max-height: 280px;
     border-radius: 0.625rem;
@@ -62,7 +63,6 @@
 
   
 </style>
-
 
 <div class="card__wrapper pink">
   <article class="article">
