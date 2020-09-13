@@ -9,3 +9,23 @@
     Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
   </p>
 </div>
+
+<style>
+  .content {
+    padding: 2rem 2rem 1.25rem;
+    background-color: white;
+    
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 200;
+        color: #6E8098;
+        
+  }
+  p {
+    font-size: 13px;
+    color: #6E8098;
+    margin-bottom: 0;
+  }
+</style>

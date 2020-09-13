@@ -1,6 +1,7 @@
 <script>
 	import Card from './components/Card.svelte';
 	import Content from './components/Content.svelte';
+	import Author from './components/Author.svelte';
 	let ArticleImage = '../images/drawers.jpg';
 </script>
 
@@ -10,6 +11,9 @@
 		<div slot="article__content">
 			<Content />
 		</div>
+			<div slot="article__author-info">
+				<Author/>
+			</div>
 	</Card>
 </main>
 
@@ -21,7 +25,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 1.5rem
+		padding: 0 1.5rem;
+		font-family: 'Manrope', sans-serif;
 	}
 
 	img {
@@ -29,6 +34,12 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: 0;
+	}
+	@media (min-widtth: 768px) {
+		img {
+
+			height: unset;
+		}
 	}
 </style>
 

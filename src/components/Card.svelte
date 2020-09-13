@@ -1,9 +1,10 @@
 <style>
   .card__wrapper {
     width: 100%;
-    max-width: 730px; /* change to rem */
-    height: 512px;
-    max-height: 280px;
+    max-width: 327px;
+     /* change to rem */
+    /* height: 512px;
+    max-height: 280px; */
     border-radius: 0.625rem;
     overflow: hidden;
     box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
@@ -23,21 +24,24 @@
   }
 
   @media (min-width:768px) {
+    .card__wrapper {
+      max-width: 730px;
+    }
     .article {
       flex-direction: row;
     }
     .article__image-wrapper {
       max-width: 39%;
-      height: 100%;
       max-height: unset;
+      height: unset;
     }
   }
 
   .article__content-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
   }
 
   em {
