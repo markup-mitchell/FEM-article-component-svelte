@@ -1,9 +1,16 @@
+<script>
+  import Share from "./Share.svelte";
+  let shareIsOpen = true;
+    function toggleShare() {shareIsOpen = !shareIsOpen};
+</script>
+
 <style>
-  .layout-no-overflow {
+  .layout__anchor {
+    position: relative;
+  }
+  .layout__anchor--overflow {
       position: relative;
-      display: flex;
       background-color: tomato;
-      width: 100%;
     }
   .card__wrapper {
     width: 100%;
@@ -23,6 +30,19 @@
     display: flex;
     flex-direction: column;
   }
+  button {
+    border-radius: 50%;
+    position: absolute;
+    right:2rem;
+    bottom:1rem;
+
+    display: inline-block;
+    border: none;
+    margin: 0;
+    padding: 0.5rem;
+    background: #ECF2F8;
+  }
+
 
   @media (min-width:768px) {
     .card__wrapper {
@@ -35,7 +55,10 @@
       max-width: 39%;
       max-height: unset;
       height: unset;
-
+    }
+    .layout__anchor--overflow {
+      display: flex;
+      width: 100%;
     }
   }
 
@@ -67,12 +90,18 @@
     background-color: pink;
   }
 
+  .fill-white {
+      fill: white;
+    }
+    .button-bg-dark {
+      background-color: #6E8098;
+    }
   
 </style>
-
-<div class="layout-no-overflow">
-  <div class="card__wrapper pink">
-    <article class="article">
+<div class="layout__anchor--overflow">
+<div class="layout__anchor">
+    <div class="card__wrapper pink">
+      <article class="article">
       <div class="article__image-wrapper">
       <slot name="article__image" >
         <em class="article__image-placeholder">Image Placeholder</em>
@@ -88,4 +117,9 @@
     </div>
   </article>
 </div>
+<button on:click={toggleShare} class:button-bg-dark="{shareIsOpen}">
+  <svg fill="#6E8098" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path class:fill-white="{shareIsOpen}" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+</button>
+</div>
+
 </div>

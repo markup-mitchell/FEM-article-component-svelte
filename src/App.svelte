@@ -2,6 +2,7 @@
 	import Card from './components/Card.svelte';
 	import Content from './components/Content.svelte';
 	import Author from './components/Author.svelte';
+	import Share from './components/Share.svelte'
 	let ArticleImage = '../images/drawers.jpg';
 </script>
 
@@ -10,10 +11,15 @@
 		<img slot="article__image" src={ArticleImage} alt="">
 		<div slot="article__content">
 			<Content />
+			
 		</div>
-			<div slot="article__author-info">
-				<Author/>
-			</div>
+		<div slot="article__author-info">
+			<Author>
+				<div class="" slot="share">
+					<Share shareIsOpen=true />
+				</div>
+			</Author>
+		</div>
 	</Card>
 </main>
 
