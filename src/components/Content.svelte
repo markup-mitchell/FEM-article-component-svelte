@@ -31,6 +31,7 @@
     color: #9DAEC2;
     margin-bottom: 0;
     line-height: 20px;
+    font-weight: 500;
   }
 
   @media (min-width: 768px) {

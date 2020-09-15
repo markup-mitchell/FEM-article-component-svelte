@@ -10,7 +10,7 @@
       <img class="author__image" src={author_image} alt={author_name}>
       <div class="author__info">
         <p class="author-name">{author_name}</p>
-        <time class="publish-date">{publish_date}</time>
+        <p class="publish-date">{publish_date}</p>
       </div>
       <div class="button-slot__wrapper">
         <slot name="button-slot"/>  
