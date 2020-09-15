@@ -1,4 +1,10 @@
 <style>
+  .layout-no-overflow {
+      position: relative;
+      display: flex;
+      background-color: tomato;
+      width: 100%;
+    }
   .card__wrapper {
     width: 100%;
     max-width: 327px;
@@ -64,9 +70,10 @@
   
 </style>
 
-<div class="card__wrapper pink">
-  <article class="article">
-    <div class="article__image-wrapper">
+<div class="layout-no-overflow">
+  <div class="card__wrapper pink">
+    <article class="article">
+      <div class="article__image-wrapper">
       <slot name="article__image" >
         <em class="article__image-placeholder">Image Placeholder</em>
       </slot>
@@ -80,4 +87,5 @@
       </slot>
     </div>
   </article>
+</div>
 </div>
