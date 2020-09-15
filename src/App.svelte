@@ -1,26 +1,15 @@
 <script>
 	import Card from './components/Card.svelte';
-	import Content from './components/Content.svelte';
-	import Author from './components/Author.svelte';
-	import Share from './components/Share.svelte'
-	let ArticleImage = '../images/drawers.jpg';
+	let data = {
+		featured_image: './images/drawers.jpg',
+		featured_image_alt: "Framed pictures and a vase of wild grass on top of a chest of drawers against a whitewashed brick wall.",
+		
+	}
+	
 </script>
 
 <main>
-	<Card>
-		<img slot="article__image" src={ArticleImage} alt="">
-		<div slot="article__content">
-			<Content />
-			
-		</div>
-		<div slot="article__author-info">
-			<Author>
-				<div class="" slot="share">
-					<Share shareIsOpen=true />
-				</div>
-			</Author>
-		</div>
-	</Card>
+	<Card {data} />
 </main>
 
 <style>
@@ -35,16 +24,6 @@
 		font-family: 'Manrope', sans-serif;
 	}
 
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: 0 0;
-	}
-	@media (min-width: 768px) {
-		img {
-			height: unset;
-		}
-	}
+
 </style>
 

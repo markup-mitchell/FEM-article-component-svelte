@@ -14,7 +14,7 @@
   .content {
     padding: 2rem 2rem 1.25rem;
     background-color: white;
-    
+    height: 100%;
   }
   h2 {
     margin: 0;
@@ -25,13 +25,14 @@
   }
   p {
     font-size: 13px;
-    color: #6E8098;
+    color: #9DAEC2;
     margin-bottom: 0;
+    line-height: 20px;
   }
 
   @media (min-width: 768px) {
     .content {
-      padding: 2rem 2.5rem;
+      padding: 2rem 2.5rem 0;
     }
   }
 </style>

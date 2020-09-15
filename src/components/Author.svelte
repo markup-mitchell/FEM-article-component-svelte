@@ -6,16 +6,20 @@
   let shareIsOpen = true;
 </script>
 
-<div class="author-wrapper">
-  <div class="author">
-    <img class="author__image" src={author} alt="">
-    <div class="author__info">
-      <p class="author-name">{authorName}</p>
-      <time class="publish-date">{publishDate}</time>
+  <div class="author-wrapper">
+    <div class="author">
+      <img class="author__image" src={author} alt="">
+      <div class="author__info">
+        <p class="author-name">{authorName}</p>
+        <time class="publish-date">{publishDate}</time>
+      </div>
+      <div class="button-slot__wrapper">
+        <slot name="button-slot"/>  
+      </div>
     </div>
+    <slot name="share">MODAL OVERFLOW</slot>
   </div>
-  <slot name="share" />  
-</div>
+
 
 
   <style>
@@ -27,6 +31,8 @@
     padding: 1rem 2rem;
     display: flex;
     background-color: white;
+    position: relative;
+    align-items: center;
   }
   img {
     border-radius: 50%;
@@ -43,24 +49,29 @@
   .author-name,
   .publish-date {
     margin:0;
+    color: #48556A;
+    font-size: 12px;
+    line-height: 1.5;
   }
   .publish-date {
-    font-size: 12px;
+    color: #9DAEC2
   }
 
-  
-
- 
+  .button-slot__wrapper {
+    position: absolute;
+    right:2.5rem;
+    bottom:1.2rem;
+    z-index: 10;
+  }
   @media (min-width: 768px) {
     .author {
       padding: 0 2.5rem 2rem;
-      position: unset;
     }
     .author-wrapper {
       position: unset;
     }
+    .button-slot__wrapper {
+      bottom:2.25rem;
+    }
   }
-   
-
-    
 </style>
