@@ -2,11 +2,16 @@
   import Content from './Content.svelte';
 	import Author from './Author.svelte';
 	import Share from './Share.svelte'
-  let ArticleImage = '../images/drawers.jpg';
-  
+
   export let data;
-  // import Share from "./Share.svelte";
-  let shareIsOpen = true;
+  const {featured_image,
+		featured_image_alt,
+		author_image,
+		author_name,
+		publish_date,
+		content_heading,
+		content_text } = data;
+  let shareIsOpen = false;
     function toggleShare() {shareIsOpen = !shareIsOpen};
 </script>
 
@@ -15,13 +20,13 @@
       <div class="card__wrapper pink">
         <article class="article">
         <div class="article__image-wrapper">
-        <img src={data.featured_image} alt={data.featured_image_alt}>
+        <img src={featured_image} alt={featured_image_alt}>
       </div>
       <div class="article__content-wrapper">
-        <Content/>
-        <Author>
+        <Content {content_heading} {content_text}/>
+        <Author {author_name} {author_image} {publish_date}>
           <div slot="share">
-            <!-- <Share {shareIsOpen} /> -->
+            <Share {shareIsOpen} />
           </div>
           <button slot="button-slot" on:click={toggleShare} class:button-bg-dark="{shareIsOpen}">
             <svg fill="#6E8098" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path class:fill-white="{shareIsOpen}" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
@@ -30,7 +35,7 @@
                 <polygon points="0,0 24,0 12,12 0,0" />
               </svg>
           </button>
-          </Author>
+          </Author >
       </div>
     </article>
   </div>

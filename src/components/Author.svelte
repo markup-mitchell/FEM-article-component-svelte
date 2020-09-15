@@ -1,23 +1,22 @@
 
 <script>
-  export let authorName = "Anonymous";
-  export let publishDate = "28 Jun 2020";
-  let author = '../../images/avatar-michelle.jpg';
-  let shareIsOpen = true;
+  export let author_name = "Anonymous";
+  export let author_image;
+  export let publish_date; 
 </script>
 
   <div class="author-wrapper">
     <div class="author">
-      <img class="author__image" src={author} alt="">
+      <img class="author__image" src={author_image} alt={author_name}>
       <div class="author__info">
-        <p class="author-name">{authorName}</p>
-        <time class="publish-date">{publishDate}</time>
+        <p class="author-name">{author_name}</p>
+        <time class="publish-date">{publish_date}</time>
       </div>
       <div class="button-slot__wrapper">
         <slot name="button-slot"/>  
       </div>
     </div>
-    <slot name="share">MODAL OVERFLOW</slot>
+    <slot name="share"/>
   </div>
 
 
