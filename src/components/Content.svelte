@@ -22,7 +22,7 @@
   h2 {
     margin: 0;
     font-size: 1.25rem;
-    font-weight: 200;
+    font-weight: 700;
         color: #6E8098;
         
   }

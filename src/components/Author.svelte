@@ -32,6 +32,7 @@
     background-color: white;
     position: relative;
     align-items: center;
+    font-weight: 500;
   }
   img {
     border-radius: 50%;
